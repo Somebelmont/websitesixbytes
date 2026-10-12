@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1b2340">
+  <title>BYTEBLAST 6-1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header class="header">
+      <p class="eyebrow">SIXBYTES GROUP ACTIVITY</p>
+      <h1>BYTEBLAST <span>6-1</span></h1>
+      <p class="subtitle">Place blocks. Clear lines. Beat your best.</p>
+    </header>
+
+    <section class="scores" aria-label="Scores">
+      <div class="box"><span>Score</span><strong id="score">0</strong></div>
+      <div class="box"><span>Best</span><strong id="best">0</strong></div>
+    </section>
+
+    <section class="game-panel" aria-label="Block puzzle game">
+      <div class="board-wrap">
+        <div id="board" class="board" role="grid" aria-label="8 by 8 game board"></div>
+      </div>
+      <div class="tray-label">YOUR BLOCKS <span>Drag onto the board</span></div>
+      <div id="tray" class="tray" aria-label="Available blocks"></div>
+      <div class="actions">
+        <button id="restart" class="btn" type="button">↻ New Game</button>
+      </div>
+    </section>
+
+    <p class="hint">Drag a block onto the grid. Fill a complete row or column to clear it and earn bonus points.</p>
+    <p class="footer-note">SIXBYTES GROUP ACTIVITY · BYTEBLAST 6-1</p>
+
+    <div id="overlay" class="overlay hidden" role="dialog" aria-modal="true" aria-labelledby="gameOverTitle">
+      <div class="modal">
+        <div class="modal-icon">✦</div>
+        <p class="eyebrow">NICE TRY</p>
+        <h2 id="gameOverTitle">Game Over</h2>
+        <p class="result-label">Your final score</p>
+        <strong id="finalScore" class="final-score">0</strong>
+        <button id="again" class="btn" type="button">Play Again</button>
+      </div>
+    </div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
